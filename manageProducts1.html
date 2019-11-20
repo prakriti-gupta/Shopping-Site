@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>My Shop</title>
+    
+</head>
+<body onload="loadDoc()">
+   
+<a id = "aAddProduct"  href ="#" size="5px">Add a new product</a><br>
+ <a id = "showProductList"  href ="view.html" size="5px">Show Products List</a>   
+<div id = "divAddProducts">
+</div>
+<div>
+            <h4> List of Products</h4>
+</div>
+<div id = "divListProducts" style="padding:15px">
+</div>
+</body>
+    
+<script src="script1.js" type="text/javascript"></script>
+<script>
+  var xhttp = new XMLHttpRequest(); 
+    function loadDoc() 
+{
+  xhttp.open("GET", "http://localhost:8000/json");
+ xhttp.send();
+  
+}
+   xhttp.onreadystatechange=function() 
+{
+    // readyState 4 means the request is done.
+    // status 200 is a successful return.
+    if (xhttp.readyState == 4 && xhttp.status == 200) 
+    {
+      //document.getElementById("users").innerHTML = xhttp.responseText; // 'This is the output.'
+      let users = JSON.parse( xhttp.responseText) ;
+      if(Array.isArray( users)  && users.length )
+      {
+        users.forEach(function(user)
+                      {
+                          let node = document.createElement("p");                 // Create a <p> node
+                          let textNode = document.createTextNode("Id : "+user.id+ "Name : "+ user.name + " Description : " + user.description + " Price : "+ user.price + " Quantity = "+ user.quantity);         // Create a text node
+                          node.appendChild(textNode);                              // Append the text to <p>
+                          document.getElementById("divListProducts").appendChild(node); 
+            console.log(node);// Append <p> to <div> with 
+                      });   
+      }
+    }
+    else
+    {
+        // An error occurred during the request.
+       console.log(xhttp.status) ;
+    }
+  };
+  loadDoc();
+    </script>
+</html>

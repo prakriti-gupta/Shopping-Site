@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+    <head>
+    <title>project</title>
+        <link rel="stylesheet" href="style1.css" type="text/css">
+        <link rel="stylesheet" href="homePage.css" type="text/css">
+        
+    </head>
+    <body>
+   
+        <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="hori5.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="hori2.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="hori3.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+ <table width="42%" align="center" style="margin-left: 30%;">
+       <tr><td>
+      
+        <button id="login"  class="a2 zoom" onclick='window.location.href="login.html"'>Login</button></td>
+                
+        <td>
+                
+       <button id="register" class="a2 zoom" style="background-color: lightcoral;" onclick='window.location.href="signIn.html"'>Register</button>
+            
+      </td>
+            </tr>
+        </table>
+<script>
+var slideIndex = 0;
+showSlides();
+
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+        <script src="script.js"></script>
+
+    </body>
+</html>

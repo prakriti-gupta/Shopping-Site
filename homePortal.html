@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>My Shop</title>
+     <link rel="stylesheet" href="homePortal.css" type="text/css">
+   
+    <style>
+     .btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Green */
+.success {
+  border-color: #4CAF50;
+  color: green;
+}
+
+.success:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+   
+<body onload="getStoredProducts()" >
+   
+
+    <div class="topnav">
+        <ul><li id="display"></li></ul>
+       <a href="#" id="display" class="active" onclick="logoutUser()">Logout</a>
+        <a href="#" id="aAddProduct" onclick="openNav()" >Add Product</a>
+       
+     </div>
+   
+    <div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+       
+       
+  <div class="overlay-content" id="divAddProducts">
+  </div>
+</div>
+
+   
+<div id = "divAddProducts">
+</div>
+<div>
+    <br><br><br>
+         
+</div>
+<div id = "divListProducts" style="padding:15px">
+</div>
+   
+<!--
+    <button class="btn success" style="margin-top: 3%; margin-left: 25%;" id="previous" onclick=" previousData()">Prev</button>
+   
+     <button class="btn success" style="margin-top: 3%; margin-left: 40%;" id="next" onclick=" nextData()">Next</button>
+-->
+   
+</body>
+<script src="script1.js"></script>
+    <script>
+//     <a href="#">Add Product</a>
+//        <ul><li id="display"></li></ul>
+    </script>
+</html>

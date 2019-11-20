@@ -1,0 +1,50 @@
+
+
+<html>
+<head>
+<title>My Shop</title>
+    <link rel="stylesheet" href="view.css" type="text/css">
+    
+     <style>
+     .btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Green */
+.success {
+  border-color: #4CAF50;
+  color: green;
+}
+
+.success:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+   <div class="topnav">
+       <a href="#" class="active" id="logout" onclick="logoutUser()">Logout</a>
+  <a href="checkOut.html">Cart</a>
+  <ul><li id="display"></li></ul>
+      
+    </div>
+     
+<div id = "divListProducts" style="padding:15px">
+</div>
+<!--
+     <button class="btn success" style="margin-top: 3%; margin-left: 25%;" id="previous" onclick=" previousData()">Prev</button>
+   
+     <button class="btn success" style="margin-top: 3%; margin-left: 40%;" id="next" onclick=" nextData()">Next</button>
+-->
+   
+   
+</body>
+<script src="showList.js"></script>
+  
+</html>

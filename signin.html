@@ -1,0 +1,67 @@
+<html>
+    <head>
+    <title>Login</title>
+    <style>
+        #Email{
+            margin-left:43px;
+        }
+        #Password{
+            margin-left:15px;
+        }
+        
+body
+{
+    background-color: lightcoral;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-image: url(color-bag.png);
+    height:70%;
+}
+        
+        div
+        {
+            border-radius:12px;
+            background-color: rgba(211,211,211, 0.3); 
+            width: 50%; 
+            height: 100%;
+            margin-top: 20%; 
+            box-shadow: 10px 10px 5px grey;
+        }
+    </style>
+    </head>
+    <body >
+        <table width="100%" >
+            <tr>
+                <td width="50%" align="right">
+                 </td>
+                
+                <td>
+       <div  align="center">
+           <br>
+            <b>First Name:</b><input type='text' style="margin-left: 5%;" name='firstName' id='firstName' placeholder="First Name"  required><br><br><br>
+           
+            <b>Last Name:</b><input type='text' style="margin-left: 5%;" name='lastName'id='lastName'placeholder="Last Name"  required><br><br><br>
+           
+            <b>Email:</b><input type='email' style="margin-left: 17%;" name='email'
+            id='email' placeholder="Email" required><br><br><br >
+           
+           
+            <b>Create Password:</b><input type='password' name='createPassword'id='createPassword'placeholder="Create Password"  required><br><br><br>
+           
+           
+            <b>Confirm Password:</b><input type='password' name='confirmPassword' id='confirmPassword' placeholder="Confirm Password"  required><br><br><br>
+           
+            <b>Phone no:</b><input type='number' style="margin-left: 17%;" name='phoneNo' id='phoneNo'placeholder="Phone No."  required><br><br><br>
+           
+            <input style="border-radius:12px;width:40%;height:15%;"type="submit" name='SignIn' id='SignIn' value="SignUp" onclick="signin()">
+           
+            <input style="border-radius:12px;width:40%;height:15%;"type="button" onclick='window.location.href="login.html"' name='login' id='login' value="Go back to login">
+           <br>
+           <br>
+                    </div>
+               </td> </tr>
+            </table>
+    </body>
+<script src="signin.js"></script>
+</html>

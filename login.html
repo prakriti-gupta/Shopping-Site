@@ -1,0 +1,60 @@
+<html>
+    <head>
+    <title>Login</title>
+    <style>
+        #Email{
+            margin-left:43px;
+        }
+        #Password{
+            margin-left:15px;
+        }
+        
+body
+{
+    
+    background-color: lightcoral;
+    height:100vh;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-image: url(color-bag.png);
+    height:70%;
+}
+        
+        div
+        {
+            border-radius:12px;
+            background-color: rgba(128,128,128, 0.3); 
+            width: 50%; 
+            height: 100%;
+            margin-top: 40%; 
+            box-shadow: 10px 10px 5px grey;
+        }
+    </style>
+    </head>
+    <body >
+        <table width="100%" >
+            <tr>
+                <td width="50%" align="right">
+                 </td>
+                
+                <td width="50%">
+        <div align="center" style="border-radius:12px;background-color: rgba(128,128,128, 0.3); width: 50%; height: 100%;margin-top: 35%; ">
+            <br>
+            
+                <b>Email:</b> <input style="margin-left: 15%"type="email"id='Email'name="Email" placeholder="Email" required><br><br><br>
+           
+                <b>Password:</b> <input type="password" name="Password"id='Password'placeholder="Password" required><br><br><br>
+           
+              
+                
+            <br><br>
+        
+                      <input style="border-radius:12px; width:40%;height:15%;"type="button" name="Login" onclick="login()" value="Login">
+            
+                <input style="border-radius:12px; width:40%;height:15%;" type="submit" onclick='window.location.href="signIn.html"' name='signin' value="SignUp">
+                    </div>
+               </td> </tr>
+            </table>
+    </body>
+<script src="login.js"></script>
+</html>
